@@ -30,9 +30,14 @@ COPT =                          \
         -fomit-frame-pointer    \
         -Wno-unused-variable    \
         -Wno-unused-parameter   \
+        -fstack-protector-all   \
+        -fwrapv                 \
+        -fPIC                   \
+        --param ssp-buffer-size=1
 
 LOPT =                          \
     -s                          \
+    -z relro -z now
 
 LIBS =                          \
     -lcrypto                    \
