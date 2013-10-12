@@ -89,6 +89,13 @@ all:parser
 	@${CPLUS} -MD ${INC} ${COPT}  -c cb/rewards.cpp -o .objs/rewards.o
 	@mv .objs/rewards.d .deps
 
+.objs/find_script.o : cb/find_script.cpp
+	@echo c++ -- cb/find_script.cpp
+	@mkdir -p .deps
+	@mkdir -p .objs
+	@${CPLUS} -MD ${INC} ${COPT}  -c cb/find_script.cpp -o .objs/find_script.o
+	@mv .objs/find_script.d .deps
+
 .objs/simpleStats.o : cb/simpleStats.cpp
 	@echo c++ -- cb/simpleStats.cpp
 	@mkdir -p .deps
@@ -170,6 +177,7 @@ OBJS=                       \
     .objs/parser.o          \
     .objs/pristine.o        \
     .objs/rewards.o         \
+    .objs/find_script.o     \
     .objs/rmd160.o          \
     .objs/sha256.o          \
     .objs/simpleStats.o     \
